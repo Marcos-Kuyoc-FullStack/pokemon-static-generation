@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { ReactNode } from "react"
+import { Navbar } from "../ui"
 
 type Props = {
   children: ReactNode,
@@ -17,13 +18,10 @@ export const Layout = ({children, title}: Props) => {
         <meta name="description" content={`Información sobre el pokémon ${title}`} />
         <meta name="keywords" content={`${title} pokemon, pokedex`} />
       </Head>
-      {/* Navbar */}
-      <main>
+      <Navbar />
+      <main style={{margin: '0px'}}>
         {children}
       </main>
-      <nav>
-
-      </nav>
     </>
   )
 }
