@@ -1,8 +1,7 @@
-import { Grid, Card , Row, Text} from '@nextui-org/react'
 import type { GetStaticProps, NextPage } from 'next'
 import { pokeApi } from '../api'
 import { Layout } from '../components/layouts'
-import { PokemonCard, PokemonList } from '../components/pokemon'
+import { PokemonList } from '../components/pokemon'
 import { PokemonListResponse, SmallPokemon } from '../interfaces'
 
 interface Props {
@@ -16,8 +15,6 @@ const Home: NextPage<Props> = ({pokemons}) => {
     </Layout>
   )
 }
-
-
 
 // Solo se ejecuta del lado del servidor
 // solo se ejecuta una sola vez en tiempo de compilacion para generar datos estaticos.

@@ -7,11 +7,12 @@ type Props = {
 }
 
 const PokemonCard = ({ pokemon }: Props) => {
-  const {id, img,name} = pokemon;
+  const {id, img, name} = pokemon;
   const router = useRouter();
 
   const onClick = () => {
-    router.push(`/pokemon/${pokemon.id}`)
+    //router.push(`/pokemon/${pokemon.id}`)
+    router.push(`/name/${pokemon.name}`)
   }
 
   return (
